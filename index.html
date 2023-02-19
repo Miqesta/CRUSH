@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="firstDiv">
+    <p>ჯერ ამას დააჭირე</p>
+    <button id="playSoundBtn">დამაჭირე</button>
+  </div>
+  
+  <div id="secondDiv" style="display: none;">
+    <p>გიყვარვარ თუ გკიდივარ?</p>
+    <button id="yesBtn">მიყვარხარ</button>
+    <button id="noBtn">მკიდიხარ</button>
+  </div>
+  <!-- JavaScript code -->
+<script>
+  // Get the HTML elements
+  var playSoundBtn = document.getElementById("playSoundBtn");
+  var yesBtn = document.getElementById("yesBtn");
+  var noBtn = document.getElementById("noBtn");
+
+  // Add event listener for the "დამაჭირე" button
+  playSoundBtn.addEventListener("click", function() {
+    // Create and play the sound
+    var sound = new Audio("wanna.mp3");
+    sound.play();
+    
+    // Hide the first div and show the second div
+    var firstDiv = document.getElementById("firstDiv");
+    var secondDiv = document.getElementById("secondDiv");
+    firstDiv.style.display = "none";
+    secondDiv.style.display = "block";
+  });
+
+  // Add event listener for the "მიყვარხარ" button
+  yesBtn.addEventListener("click", function() {
+    // Create and play the second sound
+    var secondSound = new Audio("baby.mp3");
+    secondSound.play();
+  });
+// Add event listener for the "მკიდიხარ" button
+noBtn.addEventListener("click", function() {
+  // Choose a random position for the button
+  var randomLeft = Math.floor(Math.random() * window.innerWidth);
+  var randomTop = Math.floor(Math.random() * window.innerHeight);
+
+  // Set the button's position to the chosen position
+  noBtn.style.position = "absolute";
+  noBtn.style.left = randomLeft + "px";
+  noBtn.style.top = randomTop + "px";
+});
+
+</script>
+</body>
+</html>

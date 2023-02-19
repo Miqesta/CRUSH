@@ -1,0 +1,126 @@
+@import url("//cdn.web-fonts.ge/fonts/bpg-banner-caps/css/bpg-banner-caps.min.css");
+*{
+    font-family: "BPG Banner Caps", sans-serif;
+    color:#fff;
+
+}
+body{
+    overflow: hidden;
+    background-image:url(galaxy.jpg) ;
+}
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  #firstDiv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 400%;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px black;
+    margin-top: 15%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    animation: movemove 2.5s ease-in-out infinite;
+    
+   
+    
+  }
+
+  
+  #secondDiv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 400%;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px black;
+    margin-top: 15%;
+    width: auto;
+    height: auto;
+    animation: movemove 2.5s ease-in-out infinite;
+    
+   
+  }
+  #yesBtn:hover{
+    color: green !important;
+  }
+  #firstDiv button{
+    font-size: 100%;
+    border: none;
+    background: none;
+    transition: 0.4s;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  #firstDiv button:hover{
+    font-size: 120%;
+    border-radius: 0.5cm;
+    text-shadow: 3px 2px 5px black; 
+  }
+ #secondDiv button:hover{
+    font-size: 110%;
+    color: red;
+    border-radius: 0.5cm;
+    text-shadow: 2px 2px 5px black; 
+
+    
+  }
+
+  #secondDiv button{
+    font-size: 100%;
+    border: none;
+    background: none;
+    transition: 0.4s;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes movemove {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(1cm, 0);
+    }
+    50% {
+      transform: translate(1cm, 1cm);
+    }
+    75% {
+      transform: translate(0, 1cm);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+    
+    #firstDiv, #secondDiv {
+      width: 100%;
+      margin: 0;
+    }
+    
+    #playSoundBtn, #yesBtn, #noBtn {
+      width: 100%;
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+  }
